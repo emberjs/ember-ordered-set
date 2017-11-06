@@ -72,6 +72,48 @@ module('OrderedSet', function() {
     assert.strictEqual(set.add(obj), set, 'when it is already in the set');
   });
 
+  test('delete() deletes an entry', function(assert) {
+    let set = OrderedSet.create();
+
+    set.add('foo');
+    set.add('bar');
+
+    assert.equal(set.size, 2);
+    assert.ok(set.has('foo'));
+
+    set.delete('foo');
+
+    assert.equal(set.size, 1);
+    assert.notOk(set.has('foo'));
+  });
+
+  test('delete() can handle non-string objects', function(assert) {
+    let set = OrderedSet.create();
+
+    let foo = { bar: 'baz' };
+    let bar = { baz: 'foo' };
+
+    set.add(foo);
+    set.add(bar);
+
+    assert.equal(set.size, 2);
+    assert.ok(set.has(foo));
+
+    set.delete(foo);
+
+    assert.equal(set.size, 1);
+    assert.notOk(set.has(foo));
+  });
+
+  test('delete() returns whether object was part of the set', function(assert) {
+    let set = OrderedSet.create();
+
+    set.add('foo');
+
+    assert.strictEqual(set.delete('foo'), true);
+    assert.strictEqual(set.delete('bar'), false);
+  });
+
   test('isEmpty()', function(assert) {
     let orderedSet = new OrderedSet();
     assert.equal(true, isEmpty(orderedSet), 'Empty ordered set is empty');
