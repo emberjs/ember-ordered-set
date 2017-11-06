@@ -184,6 +184,18 @@ module('OrderedSet', function() {
     }, context);
   });
 
+  test('toArray() returns an array of all entries', function(assert) {
+    let set = OrderedSet.create();
+
+    set.add('foo');
+    set.add('bar');
+    set.add({ baz: 'qux' });
+
+    let entries = set.toArray();
+
+    assert.deepEqual(entries, ['foo', 'bar', { baz: 'qux' }]);
+  });
+
   test('is compatible with Ember.isEmpty()', function(assert) {
     let set = OrderedSet.create();
     assert.strictEqual(isEmpty(set), true, 'Empty ordered set is empty');
