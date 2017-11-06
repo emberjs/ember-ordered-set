@@ -1,4 +1,4 @@
-# ember-ordered-set
+# @ember/ordered-set
 
 This README outlines the details of collaborating on this Ember addon.
 
