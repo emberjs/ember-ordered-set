@@ -5,6 +5,16 @@ import { isEmpty } from '@ember/utils';
 import OrderedSet from '@ember/ordered-set';
 
 module('OrderedSet', function() {
+  test('create() creates an empty new instance', function(assert) {
+    let set = OrderedSet.create();
+    assert.ok(set);
+    assert.ok(set instanceof OrderedSet);
+    assert.equal(set.size, 0);
+
+    let set2 = OrderedSet.create();
+    assert.notEqual(set, set2);
+  });
+
   test('add() returns the set', function(assert) {
     let map = OrderedSet.create();
     let obj = {};
