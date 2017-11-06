@@ -49,7 +49,6 @@ export default class OrderedSet {
   }
 
   /**
-    @since 1.8.0
     @method delete
     @param obj
     @param _guid (optional and for internal use only)
