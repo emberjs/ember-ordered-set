@@ -2,13 +2,8 @@ import { guidFor } from '@ember/object/internals';
 import { assert } from '@ember/debug';
 
 /**
-  This class is used internally by Ember and Ember Data.
-  Please do not use it at this time. We plan to clean it up
-  and add many tests soon.
-
   @class OrderedSet
   @constructor
-  @private
 */
 export default class OrderedSet {
   constructor() {
@@ -19,7 +14,6 @@ export default class OrderedSet {
     @method create
     @static
     @return {OrderedSet}
-    @private
   */
   static create() {
     let Constructor = this;
@@ -28,7 +22,6 @@ export default class OrderedSet {
 
   /**
     @method clear
-    @private
   */
   clear() {
     this.presenceSet = Object.create(null);
@@ -38,10 +31,9 @@ export default class OrderedSet {
 
   /**
     @method add
-    @param obj
-    @param guid (optional, and for internal use)
+    @param {*} obj
+    @param {string} [_guid] (for internal use)
     @return {OrderedSet}
-    @private
   */
   add(obj, _guid) {
     let guid = _guid || guidFor(obj);
@@ -57,12 +49,10 @@ export default class OrderedSet {
   }
 
   /**
-    @since 1.8.0
     @method delete
-    @param obj
-    @param _guid (optional and for internal use only)
+    @param {*} obj
+    @param {string} [_guid] (for internal use)
     @return {Boolean}
-    @private
   */
   delete(obj, _guid) {
     let guid = _guid || guidFor(obj);
@@ -85,7 +75,6 @@ export default class OrderedSet {
   /**
     @method isEmpty
     @return {Boolean}
-    @private
   */
   isEmpty() {
     return this.size === 0;
@@ -93,9 +82,8 @@ export default class OrderedSet {
 
   /**
     @method has
-    @param obj
+    @param {*} obj
     @return {Boolean}
-    @private
   */
   has(obj) {
     if (this.size === 0) { return false; }
@@ -110,7 +98,6 @@ export default class OrderedSet {
     @method forEach
     @param {Function} fn
     @param self
-    @private
   */
   forEach(fn /*, ...thisArg*/) {
     assert(`${Object.prototype.toString.call(fn)} is not a function`, typeof fn === 'function')
@@ -133,7 +120,6 @@ export default class OrderedSet {
   /**
     @method toArray
     @return {Array}
-    @private
   */
   toArray() {
     return this.list.slice();
@@ -142,7 +128,6 @@ export default class OrderedSet {
   /**
     @method copy
     @return {OrderedSet}
-    @private
   */
   copy() {
     let Constructor = this.constructor;
