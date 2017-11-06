@@ -1,3 +1,6 @@
+import { guidFor } from '@ember/object/internals';
+import { assert } from '@ember/debug';
+
 /**
   This class is used internally by Ember and Ember Data.
   Please do not use it at this time. We plan to clean it up
