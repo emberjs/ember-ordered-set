@@ -196,6 +196,24 @@ module('OrderedSet', function() {
     assert.deepEqual(entries, ['foo', 'bar', { baz: 'qux' }]);
   });
 
+  test('copy() copies all entries into a new set', function(assert) {
+    let set = OrderedSet.create();
+
+    let baz = { baz: 'qux' };
+
+    set.add('foo');
+    set.add('bar');
+    set.add(baz);
+
+    assert.ok(set.has('foo'));
+    assert.ok(set.has(baz));
+
+    let copiedSet = set.copy();
+
+    assert.ok(copiedSet.has('foo'));
+    assert.ok(copiedSet.has(baz));
+  });
+
   test('is compatible with Ember.isEmpty()', function(assert) {
     let set = OrderedSet.create();
     assert.strictEqual(isEmpty(set), true, 'Empty ordered set is empty');
