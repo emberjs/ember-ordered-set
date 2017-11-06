@@ -143,6 +143,47 @@ module('OrderedSet', function() {
     assert.strictEqual(set.has(bar), false);
   });
 
+  test('forEach() iterates over all entries', function(assert) {
+    let set = OrderedSet.create();
+
+    set.add('foo');
+    set.add('bar');
+    set.add({ baz: 'qux' });
+
+    let entries = [];
+    set.forEach(entry => entries.push(entry));
+
+    assert.deepEqual(entries, ['foo', 'bar', { baz: 'qux' }]);
+  });
+
+  test('forEach() is called with no context by default', function(assert) {
+    assert.expect(2);
+
+    let set = OrderedSet.create();
+
+    set.add('foo');
+
+    set.forEach(function(entry) {
+      assert.strictEqual(entry, 'foo');
+      assert.strictEqual(this, undefined);
+    });
+  });
+
+  test('forEach() context can be set as second argument', function(assert) {
+    assert.expect(2);
+
+    let set = OrderedSet.create();
+
+    set.add('foo');
+
+    let context = { bar: 'baz' };
+
+    set.forEach(function(entry) {
+      assert.strictEqual(entry, 'foo');
+      assert.strictEqual(this, context);
+    }, context);
+  });
+
   test('is compatible with Ember.isEmpty()', function(assert) {
     let set = OrderedSet.create();
     assert.strictEqual(isEmpty(set), true, 'Empty ordered set is empty');
