@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 
 import { isEmpty } from '@ember/utils';
 
-import OrderedSet from 'ember-ordered-set';
+import OrderedSet from '@ember/ordered-set';
 
 module('OrderedSet', function() {
   test('add() returns the set', function(assert) {

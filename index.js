@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-ordered-set'
+  name: '@ember/ordered-set'
 };
