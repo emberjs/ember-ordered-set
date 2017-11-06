@@ -8,7 +8,6 @@ import { assert } from '@ember/debug';
 
   @class OrderedSet
   @constructor
-  @private
 */
 export default class OrderedSet {
   constructor() {
@@ -19,7 +18,6 @@ export default class OrderedSet {
     @method create
     @static
     @return {OrderedSet}
-    @private
   */
   static create() {
     let Constructor = this;
@@ -28,7 +26,6 @@ export default class OrderedSet {
 
   /**
     @method clear
-    @private
   */
   clear() {
     this.presenceSet = Object.create(null);
@@ -41,7 +38,6 @@ export default class OrderedSet {
     @param obj
     @param guid (optional, and for internal use)
     @return {OrderedSet}
-    @private
   */
   add(obj, _guid) {
     let guid = _guid || guidFor(obj);
@@ -62,7 +58,6 @@ export default class OrderedSet {
     @param obj
     @param _guid (optional and for internal use only)
     @return {Boolean}
-    @private
   */
   delete(obj, _guid) {
     let guid = _guid || guidFor(obj);
@@ -85,7 +80,6 @@ export default class OrderedSet {
   /**
     @method isEmpty
     @return {Boolean}
-    @private
   */
   isEmpty() {
     return this.size === 0;
@@ -95,7 +89,6 @@ export default class OrderedSet {
     @method has
     @param obj
     @return {Boolean}
-    @private
   */
   has(obj) {
     if (this.size === 0) { return false; }
@@ -110,7 +103,6 @@ export default class OrderedSet {
     @method forEach
     @param {Function} fn
     @param self
-    @private
   */
   forEach(fn /*, ...thisArg*/) {
     assert(`${Object.prototype.toString.call(fn)} is not a function`, typeof fn === 'function')
@@ -133,7 +125,6 @@ export default class OrderedSet {
   /**
     @method toArray
     @return {Array}
-    @private
   */
   toArray() {
     return this.list.slice();
@@ -142,7 +133,6 @@ export default class OrderedSet {
   /**
     @method copy
     @return {OrderedSet}
-    @private
   */
   copy() {
     let Constructor = this.constructor;
