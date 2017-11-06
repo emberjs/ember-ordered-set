@@ -114,6 +114,14 @@ module('OrderedSet', function() {
     assert.strictEqual(set.delete('bar'), false);
   });
 
+  test('isEmpty() returns whether the set has any entries', function(assert) {
+    let set = OrderedSet.create();
+    assert.strictEqual(set.isEmpty(), true, 'Empty ordered set is empty');
+
+    set.add('foo');
+    assert.strictEqual(set.isEmpty(), false, 'Ordered set is not empty');
+  });
+
   test('isEmpty()', function(assert) {
     let orderedSet = new OrderedSet();
     assert.equal(true, isEmpty(orderedSet), 'Empty ordered set is empty');
