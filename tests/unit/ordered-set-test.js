@@ -39,11 +39,37 @@ module('OrderedSet', function() {
     assert.notOk(set.has('foo'));
   });
 
+  test('add() adds an entry', function(assert) {
+    let set = OrderedSet.create();
+
+    assert.equal(set.size, 0);
+    assert.notOk(set.has('foo'));
+
+    set.add('foo');
+
+    assert.equal(set.size, 1);
+    assert.ok(set.has('foo'));
+  });
+
+  test('add() can handle non-string objects', function(assert) {
+    let set = OrderedSet.create();
+
+    let foo = { bar: 'baz' };
+
+    assert.equal(set.size, 0);
+    assert.notOk(set.has(foo));
+
+    set.add(foo);
+
+    assert.equal(set.size, 1);
+    assert.ok(set.has(foo));
+  });
+
   test('add() returns the set', function(assert) {
-    let map = OrderedSet.create();
+    let set = OrderedSet.create();
     let obj = {};
-    assert.strictEqual(map.add(obj), map);
-    assert.strictEqual(map.add(obj), map, 'when it is already in the set');
+    assert.strictEqual(set.add(obj), set);
+    assert.strictEqual(set.add(obj), set, 'when it is already in the set');
   });
 
   test('isEmpty()', function(assert) {
