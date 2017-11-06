@@ -31,8 +31,8 @@ export default class OrderedSet {
 
   /**
     @method add
-    @param obj
-    @param _guid (optional, and for internal use)
+    @param {*} obj
+    @param {string} [_guid] (for internal use)
     @return {OrderedSet}
   */
   add(obj, _guid) {
@@ -50,8 +50,8 @@ export default class OrderedSet {
 
   /**
     @method delete
-    @param obj
-    @param _guid (optional and for internal use only)
+    @param {*} obj
+    @param {string} [_guid] (for internal use)
     @return {Boolean}
   */
   delete(obj, _guid) {
@@ -82,7 +82,7 @@ export default class OrderedSet {
 
   /**
     @method has
-    @param obj
+    @param {*} obj
     @return {Boolean}
   */
   has(obj) {
