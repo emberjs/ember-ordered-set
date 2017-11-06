@@ -25,6 +25,20 @@ module('OrderedSet', function() {
     assert.notEqual(set, set2);
   });
 
+  test('clear() removes any existing entries', function(assert) {
+    let set = OrderedSet.create();
+
+    set.add('foo');
+
+    assert.equal(set.size, 1);
+    assert.ok(set.has('foo'));
+
+    set.clear();
+
+    assert.equal(set.size, 0);
+    assert.notOk(set.has('foo'));
+  });
+
   test('add() returns the set', function(assert) {
     let map = OrderedSet.create();
     let obj = {};
