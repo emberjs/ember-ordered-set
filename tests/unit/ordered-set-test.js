@@ -122,6 +122,27 @@ module('OrderedSet', function() {
     assert.strictEqual(set.isEmpty(), false, 'Ordered set is not empty');
   });
 
+  test('has() returns whether an object is part of the set', function(assert) {
+    let set = OrderedSet.create();
+
+    set.add('foo');
+
+    assert.strictEqual(set.has('foo'), true);
+    assert.strictEqual(set.has('bar'), false);
+  });
+
+  test('has() supports non-string objects', function(assert) {
+    let set = OrderedSet.create();
+
+    let foo = { bar: 'baz' };
+    let bar = { baz: 'foo' };
+
+    set.add(foo);
+
+    assert.strictEqual(set.has(foo), true);
+    assert.strictEqual(set.has(bar), false);
+  });
+
   test('is compatible with Ember.isEmpty()', function(assert) {
     let set = OrderedSet.create();
     assert.strictEqual(isEmpty(set), true, 'Empty ordered set is empty');
