@@ -32,7 +32,7 @@ export default class OrderedSet {
   /**
     @method add
     @param obj
-    @param guid (optional, and for internal use)
+    @param _guid (optional, and for internal use)
     @return {OrderedSet}
   */
   add(obj, _guid) {
