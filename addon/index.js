@@ -155,3 +155,14 @@ export default class OrderedSet {
     return set;
   }
 }
+
+function copyNull(obj) {
+  let output = Object.create(null);
+
+  for (let prop in obj) {
+    // hasOwnPropery is not needed because obj is Object.create(null);
+    output[prop] = obj[prop];
+  }
+
+  return output;
+}
