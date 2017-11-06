@@ -122,11 +122,11 @@ module('OrderedSet', function() {
     assert.strictEqual(set.isEmpty(), false, 'Ordered set is not empty');
   });
 
-  test('isEmpty()', function(assert) {
-    let orderedSet = new OrderedSet();
-    assert.equal(true, isEmpty(orderedSet), 'Empty ordered set is empty');
+  test('is compatible with Ember.isEmpty()', function(assert) {
+    let set = OrderedSet.create();
+    assert.strictEqual(isEmpty(set), true, 'Empty ordered set is empty');
 
-    orderedSet.add('foo');
-    assert.equal(false, isEmpty(orderedSet), 'Ordered set is not empty');
+    set.add('foo');
+    assert.strictEqual(isEmpty(set), false, 'Ordered set is not empty');
   });
 });
