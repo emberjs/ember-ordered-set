@@ -1,9 +1,10 @@
-## Unreleased (2017-11-08)
+## v0.1.0 (2017-11-08)
 
 #### :rocket: Enhancement
 * [#3](https://github.com/emberjs/ember-ordered-set/pull/3)  Import OrderedSet class from ember.js. ([@Turbo87](https://github.com/Turbo87))
 
 #### :memo: Documentation
+* [#10](https://github.com/emberjs/ember-ordered-set/pull/10) Add CHANGELOG. ([@Turbo87](https://github.com/Turbo87))
 * [#9](https://github.com/emberjs/ember-ordered-set/pull/9) package.json: Add project metadata. ([@Turbo87](https://github.com/Turbo87))
 * [#6](https://github.com/emberjs/ember-ordered-set/pull/6) Improve JSDoc comments. ([@Turbo87](https://github.com/Turbo87))
 
