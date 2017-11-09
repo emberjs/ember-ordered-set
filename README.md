@@ -1,26 +1,47 @@
-# @ember/ordered-set
 
-This README outlines the details of collaborating on this Ember addon.
+ember-ordered-set
+==============================================================================
 
-## Installation
+[![npm](https://img.shields.io/npm/v/@ember/ordered-set.svg)](https://www.npmjs.com/package/@ember/ordered-set)
+[![Build Status](https://travis-ci.org/emberjs/ember-ordered-set.svg?branch=master)](https://travis-ci.org/emberjs/ember-ordered-set)
 
-* `git clone <repository-url>` this repository
-* `cd ember-ordered-set`
-* `yarn install`
+The `OrderedSet` class lets you store unique values of any type, whether
+primitive values or object references. It is mostly similar to the native
+[`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+class introduced in ES2015.
 
-## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Installation
+------------------------------------------------------------------------------
 
-## Running Tests
+```
+ember install @ember/ordered-set
+```
 
-* `yarn test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
 
-## Building
+Usage
+------------------------------------------------------------------------------
 
-* `ember build`
+After installing you can import `OrderedSet` from `@ember/ordered-set`:
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```js
+import OrderedSet from '@ember/ordered-set';
+```
+
+The `OrderedSet` class has mostly the same API as the native [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+class with a few differences:
+
+- The constructor does not take any arguments
+- A static `create()` method exists for symmetry with `Ember.Object`
+- A static `length` property does not exist on `OrderedSet`
+- `OrderedSet` has an `isEmpty()` method
+- There are no `entries()`, `keys()` and `values()` methods, but there is a
+  `toArray()` method instead
+- The `@@iterator` symbol is not defined
+- `OrderedSet` has a `copy()` method
+
+
+License
+------------------------------------------------------------------------------
+ember-ordered-set is licensed under the [MIT License](LICENSE.md).
+
