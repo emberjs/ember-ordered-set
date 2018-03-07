@@ -28,7 +28,8 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.8.2"
+    "ember-cli-babel": "6.12.0",
+    "ember-compatibility-helpers": "^1.0.0-beta.2"
   },
   "devDependencies": {
     "ember-cli": "~3.0.0",
@@ -39,6 +40,7 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
+    "ember-cli-uglify": "^2.0.2",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
