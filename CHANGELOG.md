@@ -1,3 +1,20 @@
+## v1.0.0 (2018-03-07)
+
+#### :rocket: Enhancement
+* [#17](https://github.com/emberjs/ember-ordered-set/pull/17) Avoid shipping duplicate implementation. ([@rwjblue](https://github.com/rwjblue))
+
+#### :memo: Documentation
+* [#15](https://github.com/emberjs/ember-ordered-set/pull/15) Update README. ([@Turbo87](https://github.com/Turbo87))
+
+#### :house: Internal
+* [#16](https://github.com/emberjs/ember-ordered-set/pull/16) Update to the latest ember-cli blueprint. ([@rwjblue](https://github.com/rwjblue))
+* [#13](https://github.com/emberjs/ember-ordered-set/pull/13) Remove unused `.gitkeep` files. ([@Turbo87](https://github.com/Turbo87))
+* [#12](https://github.com/emberjs/ember-ordered-set/pull/12) ember-try: Use `versionCompatibility` property. ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 2
+- Robert Jackson ([rwjblue](https://github.com/rwjblue))
+- Tobias Bieniek ([Turbo87](https://github.com/Turbo87))
+
 ## v0.1.0 (2017-11-08)
 
 #### :rocket: Enhancement
