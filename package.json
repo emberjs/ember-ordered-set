@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "6.12.0",
-    "ember-compatibility-helpers": "^1.0.0-beta.2"
+    "ember-compatibility-helpers": "^1.0.0"
   },
   "devDependencies": {
     "ember-cli": "~3.0.0",
