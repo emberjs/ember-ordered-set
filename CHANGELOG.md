@@ -1,3 +1,18 @@
+# Changelog
+
+## v1.0.1 (2018-06-04)
+
+#### :bug: Bug Fix
+* [#21](https://github.com/emberjs/ember-ordered-set/pull/21) avoid ordered-set deprecation. ([@savvymas](https://github.com/savvymas))
+
+#### :house: Internal
+* [#20](https://github.com/emberjs/ember-ordered-set/pull/20) Update ember-cli and get property test coverage for beta & canary. ([@savvymas](https://github.com/savvymas))
+* [#18](https://github.com/emberjs/ember-ordered-set/pull/18) updated ember-compatibility-helpers version.. ([@stopfstedt](https://github.com/stopfstedt))
+
+#### Committers: 2
+- Savannah Mastrangelo ([savvymas](https://github.com/savvymas))
+- Stefan Topfstedt ([stopfstedt](https://github.com/stopfstedt))
+
 ## v1.0.0 (2018-03-07)
 
 #### :rocket: Enhancement
