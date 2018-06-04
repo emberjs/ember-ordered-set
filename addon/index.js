@@ -154,7 +154,7 @@ if (NEEDS_CUSTOM_ORDERED_SET) {
     }
   }
 } else {
-  OrderedSet = Ember.OrderedSet;
+  OrderedSet = Ember.__OrderedSet__ || Ember.OrderedSet;
 }
 
 export default OrderedSet;
