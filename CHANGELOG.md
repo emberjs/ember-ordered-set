@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.2 (2018-00-00)
+
+#### :house: Internal
+
+- [#25](https://github.com/emberjs/ember-ordered-set/pull/25) Unpin ember-compability-helpers dependency.
+
 ## v2.0.1 (2018-10-03)
 
 #### :bug: Bug Fix

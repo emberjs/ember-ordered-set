@@ -2394,10 +2394,10 @@ ember-cli@~3.3.0:
     watch-detector "^0.1.0"
     yam "^0.0.24"
 
-ember-compatibility-helpers@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ember-compatibility-helpers/-/ember-compatibility-helpers-1.0.2.tgz#a7eb8969747d063720fe44658af5448589b437ba"
-  integrity sha512-pN1ezLiAM+uIKI4/BMp2hIBi6LQKxOedxKcu2mHDK+HEYuhlwki8Y2YwFSwb1w3c2YhesbkwaAJx/dvNHQGq5g==
+ember-compatibility-helpers@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ember-compatibility-helpers/-/ember-compatibility-helpers-1.1.1.tgz#3772fc94732c5aec4f1445e1d3027bde698e52a1"
+  integrity sha512-55YmsIxdnpblagzCk4nsn3PryOuCy9VBOzSZp+aO9wSq1OyAX9xKDKeEh/4ay1/fNd0G9ZKQzMU50NBFNo7sJw==
   dependencies:
     babel-plugin-debug-macros "^0.1.11"
     ember-cli-version-checker "^2.1.1"
