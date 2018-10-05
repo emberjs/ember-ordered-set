@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.0.3 (2018-10-05)
+
+#### :bug: Bug Fix
+* [#25](https://github.com/emberjs/ember-ordered-set/pull/25) Unpins ember-compability-helpers ([@locks](https://github.com/locks))
+
+#### Committers: 1
+- Ricardo Mendes ([@locks](https://github.com/locks))
+
+
 ## v2.0.2 (2018-00-00)
 
 #### :house: Internal
