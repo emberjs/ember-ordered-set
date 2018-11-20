@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: '@ember/ordered-set',
+  name: require('./package').name,
 
   options: {
     babel: {
