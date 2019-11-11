@@ -11,6 +11,15 @@ primitive values or object references. It is mostly similar to the native
 class introduced in ES2015.
 
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v2.16 or above
+* Ember CLI v2.13 or above
+* Node.js v6 or above
+
+
 Installation
 ------------------------------------------------------------------------------
 
@@ -39,6 +48,12 @@ class with a few differences:
   `toArray()` method instead
 - The `@@iterator` symbol is not defined
 - `OrderedSet` has a `copy()` method
+
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
 License
