@@ -1,5 +1,3 @@
-# Changelog
-
 ## v2.0.3 (2018-10-05)
 
 #### :bug: Bug Fix
