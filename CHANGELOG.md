@@ -1,3 +1,19 @@
+## v3.0.0 (2020-10-09)
+
+#### :boom: Breaking Change
+* [#28](https://github.com/emberjs/ember-ordered-set/pull/28) Update to Ember 3.21 ([@SergeAstapov](https://github.com/SergeAstapov))
+  * Drop Node < 10 support
+  * Drop Ember < 3.16 support
+
+#### :house: Internal
+* [#26](https://github.com/emberjs/ember-ordered-set/pull/26) Update to Ember 3.5 ([@loganrosen](https://github.com/loganrosen))
+
+#### Committers: 2
+- Logan Rosen ([@loganrosen](https://github.com/loganrosen))
+- Sergey Astapov ([@SergeAstapov](https://github.com/SergeAstapov))
+
+
+
 ## v2.0.3 (2018-10-05)
 
 #### :bug: Bug Fix
