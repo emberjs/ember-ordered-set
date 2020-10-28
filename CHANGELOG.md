@@ -1,3 +1,18 @@
+## v4.0.0 (2020-10-28)
+
+#### :boom: Breaking Change
+* [#31](https://github.com/emberjs/ember-ordered-set/pull/31) Drop Node.js 13 support and add Node.js 14 ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### :rocket: Enhancement
+* [#32](https://github.com/emberjs/ember-ordered-set/pull/32) Test addon against Embroider ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### :house: Internal
+* [#30](https://github.com/emberjs/ember-ordered-set/pull/30) Upgrade Ember CLI and blueprint to 3.22 ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### Committers: 1
+- Sergey Astapov ([@SergeAstapov](https://github.com/SergeAstapov))
+
+
 ## v3.0.0 (2020-10-09)
 
 #### :boom: Breaking Change
